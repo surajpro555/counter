@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaproject</title>
+    <style>
+        body{ 
+            background-color: rgb(107, 158, 203);
+        }
+        #count{
+            text-align: center;
+            color: rgb(244, 6, 6);
+            font-size: 80px;
+        }
+        #check{ 
+            text-align: center; font-size: 50px;
+            margin-top: 50px; color: rgb(243, 85, 0);
+        }
+        #box{
+            margin-left: 360px;
+        }
+        #box>button{
+            height: 40px;
+            width: 100px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(18, 14, 13);
+            background-color: rgb(233, 237, 241);
+            border-radius: 5px;
+        }
+        #b1,#b2,#b3{
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="count">0</h1>
+    <div id="box">
+    <button id="b1">INCREASE</button>
+    <button id="b2">DECREASE</button>
+    <button id="b3">RESET</button>
+    </div>
+    <div id="check">
+        <h1></h1>
+    </div>
+</body>
+<script>
+let ct=0;
+ let ans=document.getElementById('count')
+ let increse=document.getElementById('b1')
+ let decrese=document.getElementById('b2')
+ let reset=document.getElementById('b3')
+ let check=document.getElementById('check')
+ increse.onclick=function(){
+    ct++;
+    ans.innerHTML=ct
+    check.innerHTML='INCREASED'
+ }
+ // another way wrinting function arrow 
+ decrese.onclick=()=>{
+    ct--;
+    ans.innerHTML=ct
+    check.innerHTML='DEACREASED'
+ }
+ reset.onclick=function(){
+    ct=0;
+    ans.innerHTML=ct
+    check.innerHTML='RESET'
+ }
+</script>
+</html>
